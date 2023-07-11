@@ -12,10 +12,10 @@ namespace Ecommerce_Api.Domain.Models.Store
         public string Name { get; set; }
 
         /// Gets or sets the meta keywords
-        public string DefaultMetaKeywords { get; set; }
+        public string? DefaultMetaKeywords { get; set; }
 
         /// Gets or sets the meta description
-        public string DefaultMetaDescription { get; set; }
+        public string? DefaultMetaDescription { get; set; }
 
         /// Gets or sets the meta title
         public string DefaultTitle { get; set; }
@@ -29,11 +29,8 @@ namespace Ecommerce_Api.Domain.Models.Store
         /// Gets or sets the store URL
         public string Url { get; set; }
 
-        /// Gets or sets a value indicating whether SSL is enabled
-        public bool SslEnabled { get; set; }
-
-        /// Gets or sets the comma separated list of possible HTTP_HOST values
-        public string Hosts { get; set; }
+        // /// Gets or sets the comma separated list of possible HTTP_HOST values
+        // public string Hosts { get; set; }
 
         /// Gets or sets the identifier of the default language for this store; 0 is set when we use the default language display order
         public int DefaultLanguageId { get; set; }

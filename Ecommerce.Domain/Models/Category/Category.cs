@@ -14,10 +14,10 @@ namespace Ecommerce_Api.Domain
     public int id { get; set; }
     public string name { get; set; }
     public string description { get; set; }
-    public int parentCategoryId { get; set; }
+    public int? parentCategoryId { get; set; }
 
     // ChildrenCategories: A list of child categories id's.
-    public List<int> childrenCategoriesIds { get; set; }
+    public List<int>? childrenCategoriesIds { get; set; }
 
      // MetaTitle: The title tag for the brand page used for SEO.
      public string? metaTitle { get; set; }
