@@ -20,10 +20,12 @@ namespace Ecommerce_Api.Domain
 
         public int brandId { get; set; }
 
-     
+        public int supplierId { get; set; }
         /// Gets or sets the customer identifier
 
         public int CustomerId { get; set; }
+
+        
 
      
         /// Gets or sets the billing address identifier
