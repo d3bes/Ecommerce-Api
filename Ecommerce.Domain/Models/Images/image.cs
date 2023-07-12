@@ -7,6 +7,10 @@ namespace Ecommerce_Api.Domain
 {
     public class Image
     {
+        public int Id { get; set; }
+        public string ImgURL { get; set; }
         
+        // Navigation Properties
+        public Product Product { get; set; }
     }
 }

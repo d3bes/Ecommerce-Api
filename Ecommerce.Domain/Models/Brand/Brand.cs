@@ -28,7 +28,7 @@ namespace Ecommerce_Api.Domain
     public string? MetaDescription { get; set; }
     public  bool isDeleted { get; set;}
 
-
+    // Navigation Properties
     public List<Product>? products {get; set; }
 
     }

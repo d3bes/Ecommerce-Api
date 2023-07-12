@@ -17,6 +17,7 @@ namespace Ecommerce_Api.Domain
     public bool isDefualt {set;get;}
     public bool isDeleted { get; set; }
 
+    // Navigation Property
     public List<Product> products{set;get;}
 
     }

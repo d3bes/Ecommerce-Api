@@ -16,6 +16,7 @@ namespace Ecommerce_Api.Domain
 // ShippingAddress: The customer's shipping address.
 // BillingAddress: The customer's billing address.
 // Orders: A list of orders placed by the customer.  
+
     public Guid id { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }

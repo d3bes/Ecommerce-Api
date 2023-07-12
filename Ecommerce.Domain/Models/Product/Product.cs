@@ -7,6 +7,7 @@ using Ecommerce_Api.Domain.Models;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 using static System.Net.Mime.MediaTypeNames;
+using Ecommerce_Api.Domain.Models.Category;
 
 namespace Ecommerce_Api.Domain
 {
@@ -31,13 +32,16 @@ namespace Ecommerce_Api.Domain
         public int stock { get; set; }
         public string? dimensions { get; set; }
 
+        // ProductSize
+        public int? size { get; set; }
+        public Size? availableSize
+        {
+            get => (Size)size;
+            set => size = (int)value;
+        }
+
         // Weight: The weight of the product, used for shipping and handling calculations.
         public string? weight { get; set; }
-        public int? size { get; set; }
-        public Size? availableSize { 
-            get=> (Size)   size;
-            set=> size = (int)value;
-        }
         public string? description { get; set; }
 
 
@@ -56,14 +60,14 @@ namespace Ecommerce_Api.Domain
         public bool isDeleted { get; set; }
 
 
-        // Variants: A list of product variants, each with its own SKU, price, and attributes.
-        public List<Product>? variants { get; set; }
+        // // Variants: A list of product variants, each with its own SKU, price, and attributes.
+        // public List<Product>? variants { get; set; }
 
         // Reviews: A list of customer reviews for the product.
-        //public List<CustomerReview>? reviews { get; set; }
+        public List<CustomerReview>? reviews { get; set; }
 
         // Tags: A list of tags associated with the product, used for search and filtering.
-        public List<string>? tags { get; set; }
+        public List<Tag>? tags { get; set; }
 
         // RelatedProducts: A list of related products, used for cross-selling and upselling.
         public List<Product>? relatedProducts { get; set; }
