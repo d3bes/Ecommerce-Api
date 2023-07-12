@@ -1,15 +1,15 @@
-﻿using Microsoft.EntityFrameworkCore;
-using noon.Domain.Models.Order;
-using noon.Domain.Models;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using noon.Domain.Models.Identity;
+using Ecommerce_Api.Context;
+using Ecommerce_Api.Domain;
 
-namespace noon.Context.Context
+
+namespace Ecommerce_Api.Context
 {
     public class noonContext : IdentityDbContext<AppUser>
     {
@@ -19,8 +19,8 @@ namespace noon.Context.Context
         }
 
         public DbSet<Product> Products { get; set; }
-        public DbSet<ProductCategory> ProductCategorys { get; set; }
-        public DbSet<ProductBrand> ProductBrands { get; set; }
+        public DbSet<Category> ProductCategorys { get; set; }
+        public DbSet<Brand> ProductBrands { get; set; }
         public DbSet<Image> Images { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
