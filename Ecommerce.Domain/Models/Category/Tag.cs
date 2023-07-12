@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Ecommerce_Api.Domain.Models.Category
+namespace Ecommerce_Api.Domain
 {
     public class Tag
     {
